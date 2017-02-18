@@ -127,9 +127,9 @@ Defines the module named `module_name`.
 
     VALUE AwesomeNewModule = rb_define_module("Awesome");
     
-### rb_define_module_function(`ruby_module`, `method_name`, `implementation`, `args`)
+### rb_define_module_function(`ruby_module`, `method_name`, `implementation`, `argc`)
 
-Defines a function called `method_name` under the module `ruby_module`. Expects `args` arguments and calls `implementation` when invoked in Ruby.
+Defines a function called `method_name` under the module `ruby_module`. Expects `argc` arguments and calls `implementation` when invoked in Ruby.
 
 	VALUE rb_module_say_hi(VALUE klass)
 	{
@@ -165,9 +165,9 @@ Defines a class under the Ruby module `ruby_module` called `class_name` and inhe
 		VALUE AwesomeClass = rb_define_class_under(AwesomeNewModule, "AwesomeClass", rb_cObject);
 	}
 
-### rb_define_singleton_method(`ruby_class`, `method_name`, `implementation`, `args`)
+### rb_define_singleton_method(`ruby_class`, `method_name`, `implementation`, `argc`)
 
-Defines a class method called `method_name` under the class `ruby_class`. Expects `args` arguments and calls `implementation` when invoked in Ruby.
+Defines a class method called `method_name` under the class `ruby_class`. Expects `argc` arguments and calls `implementation` when invoked in Ruby.
 
 	VALUE rb_class_say_hi(VALUE klass)
 	{
@@ -184,9 +184,9 @@ Defines a class method called `method_name` under the class `ruby_class`. Expect
 	}
 
 	
-### rb_define_method(`ruby_class`, `method_name`, `implementation`, `args`)
+### rb_define_method(`ruby_class`, `method_name`, `implementation`, `argc`)
 
-Defines an instance called `method_name` under the class `ruby_class`. Expects `args` arguments and calls `implementation` when invoked in Ruby.
+Defines an instance called `method_name` under the class `ruby_class`. Expects `argc` arguments and calls `implementation` when invoked in Ruby.
 
 	VALUE rb_class_say_hi(VALUE klass)
 	{
