@@ -202,7 +202,7 @@ Defines an instance called `method_name` under the class `ruby_class`. Expects `
 		rb_define_method(AwesomeClass, "say_hi", rb_class_say_hi, 0);
 	}
 
-### rb_ivar_get(`ruby_object`, `ivar_name`, `value`)
+### rb_ivar_set(`ruby_object`, `ivar_name`, `value`)
 
 Sets the instance variable `ivar_name` into the object `ruby_object`
 
